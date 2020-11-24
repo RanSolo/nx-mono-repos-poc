@@ -1,3 +1,4 @@
+export * from './lib/navigation-list/navigation-list';
 export * from './lib/main/main';
 export * from './lib/header/header';
 export * from './lib/button/button';
