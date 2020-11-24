@@ -1,5 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
+
 const StyledButton = styled.button`
   font-size: 0.8rem;
   padding: 0.5rem;
