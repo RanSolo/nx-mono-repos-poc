@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Route, Link } from 'react-router-dom';
-
+// eslint-disable-next-line @typescript-eslint/no-namespace
 import { BooksFeature } from '@neighborly/books/feature';
-
 const StyledApp = styled.div``;
 export const App = () => {
   return (
