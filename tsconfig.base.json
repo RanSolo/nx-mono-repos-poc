@@ -18,7 +18,8 @@
     "paths": {
       "@neighborly/books/feature": ["libs/books/feature/src/index.ts"],
       "@neighborly/ui": ["libs/ui/src/index.ts"],
-      "@neighborly/books/data-access": ["libs/books/data-access/src/index.ts"]
+      "@neighborly/books/data-access": ["libs/books/data-access/src/index.ts"],
+      "@neighborly/books/ui": ["libs/books/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

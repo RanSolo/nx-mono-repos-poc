@@ -41,6 +41,9 @@
     },
     "books-data-access": {
       "tags": []
+    },
+    "books-ui": {
+      "tags": []
     }
   }
 }
