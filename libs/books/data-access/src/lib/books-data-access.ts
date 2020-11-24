@@ -39,3 +39,17 @@ export async function getBooks() {
     }
   ];
 }
+
+export async function getBook() {
+  // TODO: We'll wire this up to an actual API later.
+  // For now we are just returning some fixtures.
+  return (
+    {
+      id: 1,
+      title: 'The Picture of Dorian Gray',
+      author: 'Oscar Wilde',
+      rating: 3,
+      price: 9.99
+    }
+  )
+}
