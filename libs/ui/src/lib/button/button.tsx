@@ -1,20 +1,21 @@
-import React from 'react';
-
+import React, { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
-
-/* eslint-disable-next-line */
-export interface ButtonProps {}
-
-const StyledButton = styled.div`
-  color: pink;
+const StyledButton = styled.button`
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  border-radius: 4px;
+  &:hover {
+    background-color: #80a8e2;
+    border-color: #0e2147;
+  }
 `;
-
-export function Button(props: ButtonProps) {
-  return (
-    <StyledButton>
-      <h1>Welcome to Button!</h1>
-    </StyledButton>
-  );
-}
+export const Button = ({
+  children,
+  ...rest
+}: ButtonHTMLAttributes<HTMLButtonElement>) => {
+  return <StyledButton {...rest}>{children}</StyledButton>;
+};
 
 export default Button;

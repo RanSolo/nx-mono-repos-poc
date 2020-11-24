@@ -1,11 +1,28 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React, { HTMLAttributes } from 'react';
+import styled from 'styled-components';
 
-import Header from './header';
+const StyledHeader = styled.header`
+  padding: 1rem;
+  background-color: #2657ba;
+  color: white;
+  display: flex;
+  align-items: center;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  > h1 {
+    margin: 0 1rem 0 0;
+    padding-right: 1rem;
+    border-right: 1px solid white;
+  }
+`;
 
-describe('Header', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<Header />);
-    expect(baseElement).toBeTruthy();
-  });
-});
+export const Header = (props: HTMLAttributes<HTMLElement>) => (
+  <StyledHeader>{props.children}</StyledHeader>
+);
+
+export default Header;
