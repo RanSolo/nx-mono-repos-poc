@@ -35,6 +35,9 @@
     },
     "books-feature": {
       "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

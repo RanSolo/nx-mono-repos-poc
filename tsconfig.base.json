@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@neighborly/books/feature": ["libs/books/feature/src/index.ts"]
+      "@neighborly/books/feature": ["libs/books/feature/src/index.ts"],
+      "@neighborly/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
