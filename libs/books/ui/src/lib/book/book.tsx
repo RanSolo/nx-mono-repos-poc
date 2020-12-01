@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@neighborly/ui';
-
+import { IBook } from '@neighborly/shared-models';
 export interface BookProps {
-  book: any;
+  book: IBook;
   // New prop
   onAdd: (book: any) => void;
+  onSelect: (book: any) => void;
 }
 
 const StyledBook = styled.div`
@@ -30,17 +31,18 @@ const StyledBook = styled.div`
   }
 `;
 
-export const Book = ({ book, onAdd }: BookProps) => {
+export const Book = ({ book, onAdd, onSelect }: BookProps) => {
   return (
-    <StyledBook>
+    <StyledBook className={book.title} onClick={() => onSelect(book)}>
       <span className="title">
         {book.title} by <em>{book.author}</em>
       </span>
-      <span className="rating">{book.rating}</span>
       <span className="price">${book.price}</span>
       {/* Add button to UI */}
       <span>
-        <Button onClick={() => onAdd(book)}>Add to Cart</Button>
+        <Button id={`add-book-${book.title}`} onClick={() => onAdd(book)}>
+          Add to Cart
+        </Button>
       </span>
     </StyledBook>
   );

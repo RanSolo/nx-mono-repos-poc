@@ -1,0 +1,5 @@
+{
+  "jwtPrivateKey": "bookstore_jwtPrivateKey",
+  "db": "mongodb://mongo:27017/bookstore",
+  "port": "0"
+}

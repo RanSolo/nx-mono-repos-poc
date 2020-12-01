@@ -12,6 +12,7 @@ const StyledButton = styled.button`
     border-color: #0e2147;
   }
 `;
+
 export const Button = ({
   children,
   ...rest

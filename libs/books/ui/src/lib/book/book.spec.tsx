@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import Book from './book';
 import { getBook } from '@neighborly/books/data-access';
-const book = getBook();
+const book = getBook(1);
 describe('Book', () => {
   it('should render successfully', () => {
     const { baseElement } = render(

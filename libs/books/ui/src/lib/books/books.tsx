@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Book } from '../book/book';
+import { IBook } from '@neighborly/shared-models';
 
 export interface BooksProps {
-  books: any[];
-  // New prop
-  onAdd: (book: any) => void;
+  books: IBook[];
+  onAdd: (book: IBook) => void;
+  onSelect: (book: IBook) => void;
 }
 
 const StyledBooks = styled.div`
@@ -13,12 +14,12 @@ const StyledBooks = styled.div`
   border-radius: 4px;
 `;
 
-export const Books = ({ books, onAdd }: BooksProps) => {
+export const Books = ({ books, onAdd, onSelect }: BooksProps) => {
   return (
     <StyledBooks>
-      {books.map((book) => (
+      {books?.map((book) => (
         // Pass down new callback prop
-        <Book key={book.id} book={book} onAdd={onAdd} />
+        <Book key={book.id} book={book} onSelect={onSelect} onAdd={onAdd} />
       ))}
     </StyledBooks>
   );

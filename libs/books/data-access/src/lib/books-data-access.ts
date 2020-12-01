@@ -1,55 +1,20 @@
-export async function getBooks() {
-  // TODO: We'll wire this up to an actual API later.
-  // For now we are just returning some fixtures.
-  return [
-    {
-      id: 1,
-      title: 'The Picture of Dorian Gray',
-      author: 'Oscar Wilde',
-      rating: 3,
-      price: 9.99
-    },
-    {
-      id: 2,
-      title: 'Frankenstein',
-      author: 'Mary Wollstonecraft Shelley',
-      rating: 5,
-      price: 7.95
-    },
-    {
-      id: 3,
-      title: 'Jane Eyre',
-      author: 'Charlotte Brontë',
-      rating: 4,
-      price: 10.95
-    },
-    {
-      id: 4,
-      title: 'Dracula',
-      author: 'Bram Stoker',
-      rating: 5,
-      price: 14.99
-    },
-    {
-      id: 5,
-      title: 'Pride and Prejudice',
-      rating: 4,
-      author: 'Jane Austen',
-      price: 12.85
-    }
-  ];
+import { IBook } from '@neighborly/shared-models';
+const fetch = require('node-fetch')
+
+const url = "http://localhost:3333/api/books"
+
+export function getBooks(): Promise<IBook[]> {
+  return fetch(url, { mode: 'cors' })
+    .then((res: { json: () => void; }) => {
+      return res.json()
+    })
+    .catch((e: any) => console.log('response blocked by browser', e));
 }
 
-export async function getBook() {
-  // TODO: We'll wire this up to an actual API later.
-  // For now we are just returning some fixtures.
-  return (
-    {
-      id: 1,
-      title: 'The Picture of Dorian Gray',
-      author: 'Oscar Wilde',
-      rating: 3,
-      price: 9.99
-    }
-  )
-}
+//export function getBook(_id: any): Promise<IBook> {
+//  return fetch(url, { mode: 'cors' })
+//    .then((res: { json: () => void; }) => {
+//      return res.json()
+//    })
+//    .catch((e: any) => console.log('response blocked by browser', e));
+//}

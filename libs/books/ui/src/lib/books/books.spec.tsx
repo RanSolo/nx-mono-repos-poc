@@ -1,5 +1,5 @@
-import React from 'react';
 import { render } from '@testing-library/react';
+import React from 'react';
 import { getBooks } from '@neighborly/books/data-access';
 import { Books, BooksProps } from './books';
 //import {BookProps } from './book';
@@ -13,7 +13,11 @@ describe('Books', () => {
   console.log('books', books);
   it('should render successfully', () => {
     const { baseElement } = render(
-      <Books books={books} onAdd={(book) => alert(`${book} added`)} />
+      <Books
+        books={books}
+        onAdd={(book) => alert(`${book} added`)}
+        onSelect={(book) => alert(`${book} added`)}
+      />
     );
     expect(baseElement).toBeTruthy();
   });
