@@ -1,7 +1,5 @@
-
 /**
  * Primary file for GraphQL Schema
- * @author Anurag Garg <garganurag893@gmail.com>
  */
 
 import { gql } from 'apollo-server-express';
@@ -10,16 +8,16 @@ import resolvers from '../resolvers/index';
 
 const typeDefs = gql`
   type Query {
-    users: [User!]!
-    user(userId: ID!): User!
+    books: [Book!]!
+    book(bookId: ID!): User!
     login(email: String!, password: String!): AuthData!
   }
   type Mutation {
-    createUser(userInput: UserInput): AuthData!
-    updateUser(userId: ID!, updateUser: UpdateUser): User!
+    createUser(bookInput: UserInput): AuthData!
+    updateUser(bookId: ID!, updateUser: UpdateUser): User!
   }
   type Subscription {
-    userAdded: User
+    bookAdded: User
   }
   type User {
     _id: ID!
@@ -30,7 +28,7 @@ const typeDefs = gql`
     updatedAt: String!
   }
   type AuthData {
-    userId: ID!
+    bookId: ID!
     token: String!
     tokenExpiration: Int!
   }

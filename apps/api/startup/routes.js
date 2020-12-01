@@ -1,5 +1,5 @@
 const express = require('express');
-//const genres = require('../routes/genres');
+const genres = require('../src/routes/genres');
 //const customers = require('../routes/customers');
 const books = require('../src/routes/books');
 //const rentals = require('../routes/rentals');
@@ -10,7 +10,7 @@ const books = require('../src/routes/books');
 
 export default function (app) {
   app.use(express.json());
-  //app.use('/api/genres', genres);
+  app.use('/api/genres', genres.default);
   //app.use('/api/customers', customers);
   app.use('/api/books', books.default);
   //app.use('/api/rentals', rentals);
