@@ -1,9 +1,10 @@
 import * as express from 'express';
 const app = express();
 
-require("../startup/cors").default(app);
-require('../startup/db').default();
-require('../startup/routes').default(app);
+require("./app/startup/cors").default(app);
+require('./app/startup/db').default();
+require('./app/startup/routes').default(app);
+require('./app/startup/validation').default();
 
 const router = express.Router();
 

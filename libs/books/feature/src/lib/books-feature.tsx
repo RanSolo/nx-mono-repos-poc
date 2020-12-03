@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { IBook } from '@neighborly/shared-models';
+import { IBook } from 'libs/models/src/lib/book/IBook';
 import { getBooks } from '@neighborly/books/data-access';
 import { Books, Book } from '@neighborly/books/ui';
 import { on } from 'process';

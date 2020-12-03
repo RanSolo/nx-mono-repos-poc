@@ -1,5 +1,5 @@
-import { IBook } from '@neighborly/shared-models';
-import fetch from 'node-fetch';
+import { IBook } from 'libs/models/src/lib/book/IBook';
+const fetch = require('node-fetch');
 
 const url = "http://localhost:3333/api/books"
 

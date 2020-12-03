@@ -6,6 +6,8 @@ module.exports = {
     '<rootDir>/libs/books/data-access',
     '<rootDir>/libs/books/ui',
     '<rootDir>/apps/api',
-    '<rootDir>/libs/shared-models',
+    '<rootDir>/libs/models',
+    '<rootDir>/libs/genres/data-access',
+    '<rootDir>/libs/utils',
   ],
 };

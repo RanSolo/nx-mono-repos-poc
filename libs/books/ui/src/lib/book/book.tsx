@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@neighborly/ui';
-import { IBook } from 'libs/shared-models/book';
+import { IBook } from 'libs/models/src/lib/book/IBook';
 export interface BookProps {
   book: IBook;
   // New prop

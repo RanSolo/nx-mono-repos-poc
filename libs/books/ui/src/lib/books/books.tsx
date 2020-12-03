@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Book } from '../book/book';
-import { IBook } from '@neighborly/shared-models';
+import { IBook } from 'libs/models/src/lib/book/IBook';
 
 export interface BooksProps {
   books: IBook[];
@@ -17,7 +17,7 @@ const StyledBooks = styled.div`
 export const Books = ({ books, onAdd, onSelect }: BooksProps) => {
   return (
     <StyledBooks>
-      {books?.map((book) => (
+      {books.map((book) => (
         // Pass down new callback prop
         <Book key={book.id} book={book} onSelect={onSelect} onAdd={onAdd} />
       ))}

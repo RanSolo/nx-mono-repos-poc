@@ -48,7 +48,13 @@
     "api": {
       "tags": []
     },
-    "shared-models": {
+    "models": {
+      "tags": []
+    },
+    "genres-data-access": {
+      "tags": []
+    },
+    "utils": {
       "tags": []
     }
   }
