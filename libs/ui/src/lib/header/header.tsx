@@ -22,7 +22,9 @@ const StyledHeader = styled.header`
 `;
 
 export const Header = (props: HTMLAttributes<HTMLElement>) => (
-  <StyledHeader>{props.children}</StyledHeader>
+  <StyledHeader>{props.children}
+
+  </StyledHeader>
 );
 
 export default Header;

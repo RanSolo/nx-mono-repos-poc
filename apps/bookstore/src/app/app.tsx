@@ -17,7 +17,8 @@ export const App = () => {
       <Header>
         <h1>Bookstore</h1>
         <NavigationList>
-          <NavigationItem>{/*<Link to="/books">Books</Link>*/}</NavigationItem>
+          <NavigationItem>{<Link to="/books">Books</Link>}</NavigationItem>
+          <NavigationItem>{<Link to="/auth">Login</Link>}</NavigationItem>
         </NavigationList>
       </Header>
       <Main>

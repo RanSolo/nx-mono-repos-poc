@@ -1,3 +1,4 @@
 {
-  "jwtPrivateKey": "bookstore_jwtPrivateKey"
+  "jwtPrivateKey": "bookstore_jwtPrivateKey",
+  "password": "app_password"
 }

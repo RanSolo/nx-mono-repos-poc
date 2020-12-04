@@ -2,6 +2,7 @@ import * as express from 'express';
 const app = express();
 
 require("./app/startup/cors").default(app);
+require("./app/startup/config").default();
 require('./app/startup/db').default();
 require('./app/startup/routes').default(app);
 require('./app/startup/validation').default();
