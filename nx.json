@@ -39,6 +39,9 @@
     "ui": {
       "tags": []
     },
+    "HealthApi": {
+      "tags": []
+    },
     "books-data-access": {
       "tags": []
     },
@@ -55,6 +58,37 @@
       "tags": []
     },
     "utils": {
+      "tags": []
+    },
+    "health-client": {
+      "tags": []
+    },
+    "health-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["health-client"]
+    },
+    "patients-feature": {
+      "tags": []
+    },
+    "ailments-feature": {
+      "tags": []
+    },
+    "medications-feature": {
+      "tags": []
+    },
+    "models-health-client": {
+      "tags": []
+    },
+    "health-client-patients-ui": {
+      "tags": []
+    },
+    "health-client-medications-ui": {
+      "tags": []
+    },
+    "health-client-ailments-ui": {
+      "tags": []
+    },
+    "health-client-patients-data-access": {
       "tags": []
     }
   }

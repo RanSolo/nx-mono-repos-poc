@@ -22,7 +22,29 @@
       "@neighborly/books/ui": ["libs/books/ui/src/index.ts"],
       "@neighborly/models": ["libs/models/src/index.ts"],
       "@neighborly/utils": ["libs/utils/src/index.ts"],
-      "@neighborly/genres/data-access": ["libs/genres/data-access/src/index.ts"]
+      "@neighborly/genres/data-access": [
+        "libs/genres/data-access/src/index.ts"
+      ],
+      "@neighborly/patients/feature": ["libs/patients/feature/src/index.ts"],
+      "@neighborly/ailments/feature": ["libs/ailments/feature/src/index.ts"],
+      "@neighborly/medications/feature": [
+        "libs/medications/feature/src/index.ts"
+      ],
+      "@neighborly/models-health-client": [
+        "libs/models-health-client/src/index.ts"
+      ],
+      "@neighborly/health-client/patients/ui": [
+        "libs/health-client/patients/ui/src/index.ts"
+      ],
+      "@neighborly/health-client/medications/ui": [
+        "libs/health-client/medications/ui/src/index.ts"
+      ],
+      "@neighborly/health-client/ailments/ui": [
+        "libs/health-client/ailments/ui/src/index.ts"
+      ],
+      "@neighborly/health-client/patients/data-access": [
+        "libs/health-client/patients/data-access/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
